@@ -1,3 +1,14 @@
 #!/bin/bash
-
+if [ $# == 5 ]; then
+    python3 /etc/scripts/dns_record.py $1 $2 $3 $4 $5
+fi
+if [ $# == 4 ]; then
+    python3 /etc/scripts/dns_record.py $1 $2 $3 $4
+fi
+if [ $# == 3 ]; then
+    python3 /etc/scripts/dns_record.py $1 $2 $3
+fi
+if [ $# == 2 ]; then
+    python3 /etc/scripts/dns_record.py $1 $2
+fi
 exit 0

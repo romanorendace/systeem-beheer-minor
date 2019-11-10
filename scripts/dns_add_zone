@@ -1,3 +1,7 @@
 #!/bin/bash
-
+if [ $# == 1 ]; then
+    python3 /etc/scripts/dns_zone.py $1
+else
+    echo "zone script takes 1 parameter"
+fi
 exit 0
