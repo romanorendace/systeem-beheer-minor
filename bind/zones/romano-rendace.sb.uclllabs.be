@@ -3,7 +3,7 @@
 ;
 $TTL    604800
 @       IN      SOA     ns.romano-rendace.sb.uclllabs.be. root.romano-rendace.sb.uclllabs.be. (
-                             12		; Serial
+                             38		; Serial
                          604800         ; Refresh
                           86400         ; Retry
                         2419200         ; Expire
@@ -24,6 +24,13 @@ www1.romano-rendace.sb.uclllabs.be.   IN      A       193.191.177.201
 www2.romano-rendace.sb.uclllabs.be.   IN      A       193.191.177.201
 test.romano-rendace.sb.uclllabs.be.  IN      A       193.191.177.254
 
+romano-rendace.sb.uclllabs.be.		IN	CAA	0 issue "letsencrypt.org"
+
 ; Test records
 
 subzonedesh5u.romano-rendace.sb.uclllabs.be.	IN	NS	ns.romano-rendace.sb.uclllabs.be.
+fie8qu.subzonedesh5u.romano-rendace.sb.uclllabs.be.	IN	A	193.191.177.201
+kobina.romano-rendace.sb.uclllabs.be.	IN	A	193.191.177.201
+secure.romano-rendace.sb.uclllabs.be.	IN	A	193.191.177.201
+supersecure.romano-rendace.sb.uclllabs.be.	IN	A	193.191.177.201
+fie8qu.subzonedesh5u.romano-rendace.sb.uclllabs.be.	IN	A	193.191.177.201
