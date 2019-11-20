@@ -10,10 +10,26 @@ append_dot_mydomain = no
 #delay_warning_time = 4h
 
 alias_maps = hash:/etc/aliases
-alias_database = hash:/etc/aliases
-mydestination = $myhostname, localhost.$mydomain, localhost
+alias_database = hash:/etc/aliases.db
+
+myhostname = mx.romano-rendace.sb.uclllabs.be
+mydestination =  $myhostname, localhost.$mydomain, localhost
+
 relayhost = 
-mynetworks = 127.0.0.0/8
-inet_interfaces = loopback-only
+mynetworks = 127.0.0.0/8, [::ffff:127.0.0.0]/104, 10.0.0.0/8, 172.16.0.0/16, 192.168.0.0/16, 193.191.177.6
+
+#inet_interfaces = all
 recipient_delimiter = +
 
+mailbox_size_limit = 0
+inet_protocols = all
+
+virtual_mailbox_base = /var/vmail/
+virtual_mailbox_domains = hash:/etc/postfix/vmail_domains
+virtual_mailbox_maps = hash:/etc/postfix/vmail_mailbox
+virtual_uid_maps = static:2222
+virtual_gid_maps = static:2222
+virtual_transport = virtual
+
+smtpd_recipient_restrictions = permit_mynetworks, permit_sasl_authenticated, reject_unauth_destination
+smtpd_relay_restrictions = permit_mynetworks, permit_sasl_authenticated, reject_unauth_destination
