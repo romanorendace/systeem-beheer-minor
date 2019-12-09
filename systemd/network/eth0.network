@@ -7,3 +7,5 @@ Address = 193.191.177.201/25
 Gateway = 193.191.177.254
 DHCP = none
 IPv6AcceptRA = false
+Address = 2001:6a8:2880:a077::c9/64
+Gateway = 2001:6a8:2880:a077::1 
