@@ -59,3 +59,5 @@ mysql:x:117:
 dovecot:x:118:
 dovenull:x:119:
 stunnel4:x:120:
+ftp:x:121:
+mystery1_2014:x:1002:
